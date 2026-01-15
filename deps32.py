@@ -184,7 +184,7 @@ def amazon_scraper(query:str):
     try:
         queries = [query]
         start = time.time()
-        results = amazon_searcher(queries, max_workers=5)
+        results = amazon_searcher(queries, max_workers=1)
         end = time.time() - start
         return JSONResponse(content={
                 "success": True,
